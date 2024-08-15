@@ -17,7 +17,7 @@ DMA_SRC_ADDR    =   $df04               ; dma source address
 DMA_DST_ADDR    =   $df08               ; dma destination address
 DMA_COUNT       =   $df0c               ; number of bytes to copy
 
-bitmap_base     =   $22ac0              ; location of bitmap
+bitmap_base     =   $22ac0              ; location of last line of bitmap
 
 * = $7800
 
