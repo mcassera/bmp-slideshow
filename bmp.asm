@@ -45,6 +45,8 @@ init_events:
 
         lda #kernel.args.timer.FRAMES		; set the Timer to Frames
         ora #kernel.args.timer.QUERY		; and query what frame we're on
+        sta kernel.args.timer.units		; store in units parameter
+        jsr kernel.Clock.SetTimer		; jsr to Kernel routine to get current frame
         adc #$01				; add 1 to Accumulator for next frame
         sta kernel.args.timer.absolute		; store in timer.absolute paramter
         sta kernel.args.timer.cookie		; saved as a cookie to the kernel (same as frame number)
