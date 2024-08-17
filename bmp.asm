@@ -33,7 +33,7 @@ Start:
 
 SetupKernel:							; Set up the API to work with
 
-	.section zp						; Zero page section $20 to $28
+	.section zp						; Zero page section $c0 to $c8
 event:	.dstruct	kernel.event.event_t
         .send
 
